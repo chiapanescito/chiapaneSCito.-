@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archivo fotográfico | chiapaneSCito</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#fff8ef;color:#3b2114;line-height:1.5}
+.head{text-align:center;padding:35px 18px;background:linear-gradient(135deg,#32180c,#6b3518);color:white}.head h1{font-size:clamp(28px,5vw,42px);margin:0 0 10px}.head p{color:#ffd89b;max-width:750px;margin:auto}
+.btn{display:inline-block;text-decoration:none;background:#d28a32;color:white;border-radius:30px;padding:13px 22px;margin:12px 5px 0;font-weight:bold;border:0;cursor:pointer}.btn:hover{background:#b66d1c}
+.wrap{max-width:1000px;margin:auto;padding:35px 18px}.hint{text-align:center;margin-bottom:25px}.carousel{position:relative;background:#fff;border-radius:20px;box-shadow:0 8px 25px #0002;overflow:hidden}.slide{display:none;text-align:center}.slide.active{display:block}.slide img{width:100%;height:min(58vw,480px);min-height:250px;object-fit:contain;display:block;background:#f3dfc3;cursor:pointer}.slide h2{color:#6b3518;margin:16px 12px 5px}.slide p{padding:0 22px 22px;max-width:760px;margin:auto}.controls{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;padding:16px}.arrow{background:#6b3518;color:white;border:0;border-radius:50%;width:44px;height:44px;font-size:22px;cursor:pointer}.arrow:hover{background:#d28a32}.dots{display:flex;justify-content:center;gap:8px;margin:16px 0}.dot{width:11px;height:11px;border:0;border-radius:50%;background:#cbb9a7;cursor:pointer}.dot.active{background:#d28a32}.click-note{text-align:center;color:#6b3518;font-size:14px;margin-top:10px}.details{display:none;margin:18px auto 0;max-width:850px;padding:22px;background:#f3dfc3;border-left:5px solid #d28a32;border-radius:12px}.details.visible{display:block}.details h3{color:#6b3518;margin-bottom:8px}footer{text-align:center;background:#32180c;color:white;padding:22px;margin-top:35px}footer a{color:#ffd89b}
+@media(max-width:600px){.slide img{height:300px}.wrap{padding:25px 12px}}
+</style>
+</head>
+<body>
+<header class="head">
+<h1>Archivo fotográfico</h1>
+<p>Recorre nuestras fotografías. Selecciona una imagen para conocer más sobre cada producto y nuestra tradición.</p>
+<a class="btn" href="index.html">VOLVER AL SITIO PRINCIPAL</a>
+<a class="btn" href="productos-regionales.html">PRODUCTOS REGIONALES</a>
+</header>
+<main class="wrap">
+<p class="hint">Usa las flechas para recorrer la galería. Haz clic en la fotografía o en “Conocer más” para leer su descripción.</p>
+<div class="carousel" aria-label="Carrusel de fotografías">
+  <article class="slide active" data-title="Pan tradicional" data-description="Nuestro pan tradicional está pensado para tiendas, cafeterías y negocios que buscan ofrecer una variedad de pan con sabor familiar. El paquete al mayoreo incluye 100 piezas de 30 gramos.">
+    <img src="assets/galeria-pan-tradicional.jpg" alt="Pan tradicional" tabindex="0"><h2>Pan tradicional</h2><p>Una opción para surtir tu negocio.</p><button class="btn more" type="button">CONOCER MÁS</button>
+  </article>
+  <article class="slide" data-title="Pan artesanal" data-description="Pan artesanal de 60 gramos, con variedad de modelos y rellenos. Ideal para ampliar la oferta de tu tienda, cafetería o punto de venta.">
+    <img src="assets/galeria-pan-artesanal.jpg" alt="Pan artesanal" tabindex="0"><h2>Pan artesanal</h2><p>Variedad de piezas y rellenos.</p><button class="btn more" type="button">CONOCER MÁS</button>
+  </article>
+  <article class="slide" data-title="Combo variedad" data-description="El combo combina 50 piezas de pan tradicional y 25 piezas de pan artesanal. Es una alternativa para ofrecer dos tipos de producto en un mismo pedido al mayoreo.">
+    <img src="assets/galeria-combo.jpg" alt="Combo variedad" tabindex="0"><h2>Combo variedad</h2><p>Dos variedades en un mismo paquete.</p><button class="btn more" type="button">CONOCER MÁS</button>
+  </article>
+  <article class="slide" data-title="Del horno a tu negocio" data-description="La elaboración y preparación del pan forman parte de la tradición de chiapaneSCito. Coordinamos las entregas de acuerdo con las rutas y días de servicio disponibles.">
+    <img src="assets/galeria-horno.jpg" alt="Proceso de elaboración del pan" tabindex="0"><h2>Del horno a tu negocio</h2><p>Tradición y elaboración artesanal.</p><button class="btn more" type="button">CONOCER MÁS</button>
+  </article>
+  <article class="slide" data-title="Productos regionales" data-description="Además del pan, contamos con un catálogo regional con miel, frijol, tascalate, pinole, café orgánico y mole artesanal. Consulta presentaciones, precios y condiciones en la página de productos regionales.">
+    <img src="assets/galeria-regionales.jpg" alt="Productos regionales" tabindex="0"><h2>Productos regionales</h2><p>Sabores tradicionales de nuestra región.</p><button class="btn more" type="button">CONOCER MÁS</button>
+  </article>
+  <article class="slide" data-title="Nuestra tradición" data-description="ChiapaneSCito comparte el sabor de Chiapa de Corzo a través de productos elaborados con una tradición familiar. Nuestro enfoque es surtir a negocios, distribuidores y puntos de venta.">
+    <img src="assets/galeria-equipo.jpg" alt="Nuestra tradición" tabindex="0"><h2>Nuestra tradición</h2><p>Pan artesanal con sabor a hogar.</p><button class="btn more" type="button">CONOCER MÁS</button>
+  </article>
+  <div class="controls"><button class="arrow" id="prev" type="button" aria-label="Fotografía anterior">‹</button><span id="counter">1 / 6</span><button class="arrow" id="next" type="button" aria-label="Fotografía siguiente">›</button></div>
+</div>
+<div class="dots" aria-label="Elegir fotografía">
+  <button class="dot active" aria-label="Fotografía 1" type="button"></button><button class="dot" aria-label="Fotografía 2" type="button"></button><button class="dot" aria-label="Fotografía 3" type="button"></button><button class="dot" aria-label="Fotografía 4" type="button"></button><button class="dot" aria-label="Fotografía 5" type="button"></button><button class="dot" aria-label="Fotografía 6" type="button"></button>
+</div>
+<p class="click-note">La descripción aparece al seleccionar una fotografía.</p>
+<section class="details" id="details" aria-live="polite"><h3 id="detail-title"></h3><p id="detail-text"></p></section>
+</main>
+<footer><p>© 2026 <strong>chiapaneSCito®</strong></p><p>Pan artesanal con sabor a hogar.</p><a href="index.html">Regresar al inicio</a></footer>
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+const dots=[...document.querySelectorAll('.dot')];
+let current=0;
+const details=document.getElementById('details');
+function showSlide(index){current=(index+slides.length)%slides.length;slides.forEach((s,i)=>s.classList.toggle('active',i===current));dots.forEach((d,i)=>d.classList.toggle('active',i===current));document.getElementById('counter').textContent=(current+1)+' / '+slides.length;details.classList.remove('visible');}
+function showDetails(){const s=slides[current];document.getElementById('detail-title').textContent=s.dataset.title;document.getElementById('detail-text').textContent=s.dataset.description;details.classList.add('visible');details.scrollIntoView({behavior:'smooth',block:'nearest'});}
+document.getElementById('prev').addEventListener('click',()=>showSlide(current-1));
+document.getElementById('next').addEventListener('click',()=>showSlide(current+1));
+dots.forEach((d,i)=>d.addEventListener('click',()=>showSlide(i)));
+slides.forEach(s=>{s.querySelector('.more').addEventListener('click',showDetails);s.querySelector('img').addEventListener('click',showDetails);s.querySelector('img').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showDetails();}});});
+</script>
+</body>
+</html>
